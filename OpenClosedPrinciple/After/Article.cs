@@ -17,7 +17,11 @@ internal sealed class Article
         PublishedDate = publishedDate;
 
         var (IsValid, msg) = new ArticleValidator().ValidateInput(this);
-        if (!IsValid) throw new ArgumentException(msg);
+        this.IsValid = IsValid;
+        this.msg = msg;
         
     }
+    public readonly bool IsValid;
+    public readonly string? msg;
+
 }

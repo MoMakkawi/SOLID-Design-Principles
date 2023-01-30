@@ -32,15 +32,17 @@ After OCP:
 
 
 #region After
-//var newArticle = new OpenClosedPrinciple.After.Article(
-//    "OCP",
-//    "Makkai",
-//    "Open/Closed Design principle ," +
-//    " Classes should be open for extension but closed for \r\n modification.",
-//    new DateTime(2019, 10, 10));
+var newArticle = new OpenClosedPrinciple.After.Article(
+    "OCP",
+    "Makkai",
+    "Open/Closed Design principle ," +
+    " Classes should be open for extension but closed for \r\n modification.",
+    new DateTime(2003, 10, 10));
+
+if(!newArticle.IsValid)
+    Console.WriteLine(newArticle.msg);
 
 //codebase very good
-//will throw excption becouse the date pass from more than year 
 #endregion
 
 
